@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelle One - Encriptador de texto</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <main class="container">
+        <div>
+            <img class="logo" src="images/logo.svg" alt="Logo de Alura LATAM">
+        </div>
+
+        <div class="card--input">
+            <textarea id="entrada" placeholder="Ingrese el texto aqui" onkeypress="handleKeyPress(event)"></textarea>
+            <p>Solo letras minúsculas y sin acentos</p>
+            <div class="group__button">
+                <button class="button button--encrypt" id="encriptar" onclick="onEncriptar()">Encriptar</button>
+                <button class="button button--decrypt" id="desencriptar" onclick="onDesencriptar()">Desencriptar</button>            
+            </div>
+        </div>        
+        <div class="card--output">
+            <div id="notice" class="message--notice">
+                <img src="images/image.svg" alt="">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <div id="result" class="message--result" hidden>
+                <textarea id="salida"></textarea>
+                <button class="button button--copy" id="copiar" onclick="onCopyText()">Copiar</button>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
